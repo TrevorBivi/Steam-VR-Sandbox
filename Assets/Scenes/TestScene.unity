@@ -817,12 +817,12 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: e959c13b5b8ed8e4581aa9812b9bcf94,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 25
+      value: 25.000011
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: e959c13b5b8ed8e4581aa9812b9bcf94,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 25
+      value: 25.000011
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: e959c13b5b8ed8e4581aa9812b9bcf94,
         type: 3}
@@ -1654,6 +1654,8 @@ GameObject:
   - component: {fileID: 455172527}
   - component: {fileID: 455172526}
   - component: {fileID: 455172525}
+  - component: {fileID: 455172529}
+  - component: {fileID: 455172528}
   m_Layer: 0
   m_Name: BoltGrip
   m_TagString: Untagged
@@ -1669,8 +1671,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 455172523}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0225, y: -0.0922, z: 0.0472}
-  m_LocalScale: {x: 0.050381538, y: 0.0046305, z: 0.0051284074}
+  m_LocalPosition: {x: 0.0442, y: -0.0924, z: 0.0472}
+  m_LocalScale: {x: 0.015, y: 0.015, z: 0.015}
   m_Children: []
   m_Father: {fileID: 1930144502}
   m_RootOrder: 5
@@ -1735,6 +1737,91 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 455172523}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &455172528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455172523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 209ccc2887682ac45a6be653446cee53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attachedHand: {fileID: 0}
+  onPickUp:
+    m_PersistentCalls:
+      m_Calls: []
+  onDetachFromHand:
+    m_PersistentCalls:
+      m_Calls: []
+  onHeldUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  gripOffset: {x: 0, y: 0, z: 0}
+  restoreOriginalParent: 0
+  weapon: {fileID: 0}
+  allowPinchGrab: 1
+  minDistanceToGrip: 0
+  openPosition: -0.0359
+  closedPosition: -0.0924
+  state: 0
+  unlockRot: -90
+  bolt: {fileID: 1783403790}
+--- !u!114 &455172529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455172523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b93b6a877adcbf94c89a9d6e0c0e844d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activateActionSetOnAttach:
+    actionSetPath: 
+  actionSetPriority: -1
+  hideHandOnAttach: 1
+  hideSkeletonOnAttach: 0
+  hideControllerOnAttach: 0
+  handAnimationOnPickup: 0
+  setRangeOfMotionOnPickup: -1
+  useHandObjectAttachmentPoint: 1
+  attachEaseIn: 0
+  snapAttachEaseInCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  snapAttachEaseInTime: 0.15
+  snapAttachEaseInCompleted: 0
+  skeletonPoser: {fileID: 0}
+  handFollowTransform: 1
+  highlightOnHover: 1
+  hideHighlight: []
+  hoverPriority: 0
 --- !u!1 &467072058
 GameObject:
   m_ObjectHideFlags: 0
@@ -1853,7 +1940,7 @@ Transform:
   m_GameObject: {fileID: 477936213}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.865, y: 0.167, z: -0.458}
-  m_LocalScale: {x: 0.3333, y: 0.3333, z: 1}
+  m_LocalScale: {x: 0.3333, y: 0.3333, z: 3.6059}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -2344,6 +2431,7 @@ GameObject:
   - component: {fileID: 664553071}
   - component: {fileID: 664553070}
   - component: {fileID: 664553073}
+  - component: {fileID: 664553074}
   m_Layer: 0
   m_Name: SecondaryGrip
   m_TagString: Untagged
@@ -2360,7 +2448,7 @@ Transform:
   m_GameObject: {fileID: 664553068}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.3589, z: 0.0298}
-  m_LocalScale: {x: 0.028829034, y: 0.06413198, z: 0.04268771}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_Children: []
   m_Father: {fileID: 1930144502}
   m_RootOrder: 3
@@ -2385,7 +2473,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 664553068}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -2440,7 +2528,7 @@ MonoBehaviour:
   activateActionSetOnAttach:
     actionSetPath: 
   actionSetPriority: -1
-  hideHandOnAttach: 1
+  hideHandOnAttach: 0
   hideSkeletonOnAttach: 0
   hideControllerOnAttach: 0
   handAnimationOnPickup: 0
@@ -2478,6 +2566,32 @@ MonoBehaviour:
   highlightOnHover: 1
   hideHighlight: []
   hoverPriority: 0
+--- !u!114 &664553074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664553068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a53349386626dcb4886ec35a00b0f0e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attachedHand: {fileID: 0}
+  onPickUp:
+    m_PersistentCalls:
+      m_Calls: []
+  onDetachFromHand:
+    m_PersistentCalls:
+      m_Calls: []
+  onHeldUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  gripOffset: {x: 0, y: 0, z: 0}
+  restoreOriginalParent: 0
+  weapon: {fileID: 1930144504}
+  allowPinchGrab: 0
 --- !u!1 &682347119
 GameObject:
   m_ObjectHideFlags: 0
@@ -2701,12 +2815,12 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: bf78727e8a22d5942bd5c67d5a721caa,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 25
+      value: 25.000011
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: bf78727e8a22d5942bd5c67d5a721caa,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 25
+      value: 25.000011
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: bf78727e8a22d5942bd5c67d5a721caa,
         type: 3}
@@ -3130,7 +3244,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 3eea7265d896d4e42a7054c4151182e4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.00107
+      value: 0.0006
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 3eea7265d896d4e42a7054c4151182e4,
         type: 3}
@@ -3190,12 +3304,12 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 3eea7265d896d4e42a7054c4151182e4,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 25
+      value: 25.000011
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 3eea7265d896d4e42a7054c4151182e4,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 25
+      value: 25.000011
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: 3eea7265d896d4e42a7054c4151182e4,
         type: 3}
@@ -3843,6 +3957,7 @@ GameObject:
   - component: {fileID: 1290707513}
   - component: {fileID: 1290707516}
   - component: {fileID: 1290707517}
+  - component: {fileID: 1290707518}
   m_Layer: 0
   m_Name: PrimaryGrip
   m_TagString: Untagged
@@ -3857,13 +3972,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1290707511}
-  m_LocalRotation: {x: -0.202548, y: 0, z: 0, w: 0.97927237}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.0298, z: 0.0072}
   m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_Children: []
   m_Father: {fileID: 1930144502}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -23.372, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1290707513
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3884,7 +3999,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1290707511}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -3939,7 +4054,7 @@ MonoBehaviour:
   activateActionSetOnAttach:
     actionSetPath: 
   actionSetPriority: -1
-  hideHandOnAttach: 1
+  hideHandOnAttach: 0
   hideSkeletonOnAttach: 0
   hideControllerOnAttach: 0
   handAnimationOnPickup: 0
@@ -4006,6 +4121,32 @@ MonoBehaviour:
   previewPoseSelection: 0
   blendingBehaviours: []
   scale: 1
+--- !u!114 &1290707518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290707511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18736f46a7288ce45abc9a44b974e3bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attachedHand: {fileID: 0}
+  onPickUp:
+    m_PersistentCalls:
+      m_Calls: []
+  onDetachFromHand:
+    m_PersistentCalls:
+      m_Calls: []
+  onHeldUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  gripOffset: {x: 0, y: 0, z: 0}
+  restoreOriginalParent: 0
+  weapon: {fileID: 1930144504}
+  allowPinchGrab: 0
 --- !u!1 &1298752080 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 77aae524679a2384686ca1b4252fe1f4,
@@ -4226,12 +4367,12 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: da787dd4f01a87e4b9e8e8c54a08c3f1,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 25
+      value: 25.000011
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: da787dd4f01a87e4b9e8e8c54a08c3f1,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 25
+      value: 25.000011
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: da787dd4f01a87e4b9e8e8c54a08c3f1,
         type: 3}
@@ -5902,6 +6043,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1930144502}
   - component: {fileID: 1930144503}
+  - component: {fileID: 1930144504}
   m_Layer: 0
   m_Name: boltAction
   m_TagString: Untagged
@@ -5916,8 +6058,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1930144501}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.944, y: 1.337, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.791, y: 1.001, z: 0.244}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1783403790}
@@ -5931,7 +6073,7 @@ Transform:
   - {fileID: 1817408134}
   m_Father: {fileID: 0}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1930144503
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5948,6 +6090,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1930144504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930144501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffc2202cc0e2c44498aab9988cab0138, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  releaseVelocityTimeOffset: -0.011
 --- !u!1 &1932274651
 GameObject:
   m_ObjectHideFlags: 0

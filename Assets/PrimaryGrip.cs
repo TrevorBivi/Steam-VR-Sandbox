@@ -9,10 +9,18 @@ namespace Valve.VR.InteractionSystem
 	{
 
 
-
+	/*
 		protected virtual void OnAttachedToHand( Hand hand )
 		{
+			print("PRIMARY GRIP > ON ATTACHED TO HAND");
+			if(hand != null){
+				print("HAND NOT NULL");
+			}else{
+				print("HAND NULL");
+			}
+			weapon.setPrimaryGripHand(hand);
 			//RigidBody 
+			
 			hadInterpolation = parentRigidbody.interpolation;
 
 			attached = true;
@@ -33,6 +41,13 @@ namespace Valve.VR.InteractionSystem
 
 		protected virtual void OnDetachedFromHand(Hand hand)
 		{
+			print("PRIMARY GRIP > ON DETATCHED FROM HAND");
+			if(hand != null){
+				print("HAND NOT NULL");
+			}else{
+				print("HAND NULL");
+			}
+			weapon.setPrimaryGripHand(null);
 			attached = false;
 			onDetachFromHand.Invoke(hand);
 			hand.HoverUnlock(null);
@@ -46,7 +61,7 @@ namespace Valve.VR.InteractionSystem
 			parentRigidbody.angularVelocity = new Vector3(0,0,0);//angularVelocity;
 
 			weapon.setPrimaryGripHand(null);
-		}
+		}*/
 
 
 	}

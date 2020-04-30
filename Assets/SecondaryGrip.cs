@@ -5,8 +5,15 @@ namespace Valve.VR.InteractionSystem
 {
 	public class SecondaryGrip : Grip
 	{
-		protected virtual void OnAttachedToHand( Hand hand )
+		/*protected virtual void OnAttachedToHand( Hand hand )
 		{
+			print("SECONDARY GRIP > ON ATTACHED TO HAND");
+			if(hand != null){
+				print("HAND NOT NULL");
+			}else{
+				print("HAND NULL");
+			}
+			weapon.setSecondaryGripHand(hand);
 			//RigidBody 
 			hadInterpolation = parentRigidbody.interpolation;
 
@@ -28,6 +35,13 @@ namespace Valve.VR.InteractionSystem
 
 		protected virtual void OnDetachedFromHand(Hand hand)
 		{
+			print("SECONDARY GRIP > ON DETATCHED FROM HAND");
+			if(hand != null){
+				print("HAND NOT NULL");
+			}else{
+				print("HAND NULL");
+			}
+			weapon.setSecondaryGripHand(null);
 			attached = false;
 			onDetachFromHand.Invoke(hand);
 			hand.HoverUnlock(null);
@@ -40,6 +54,6 @@ namespace Valve.VR.InteractionSystem
 			parentRigidbody.angularVelocity = new Vector3(0,0,0);//angularVelocity;
 
 			weapon.setSecondaryGripHand(null);
-		}
+		}*/
 	}
 }
